@@ -103,11 +103,10 @@ class indexacaoService{
        const laboratorios = {
   "Laboratório 1": /^192\.168\.1\.(3[1-9]|[4-5][0-9]|60)$/,
   "Laboratório 2": /^192\.168\.1\.(6[1-9]|7[0-9]|80)$/,
-  "Laboratório 3": /^192\.168\.1\.(9[1-9]|[1][0-1][0-9]|120)$/,
+  "Laboratório 3": /^192\.168\.1\.(9[1-9]|1[0-1][0-9]|120)$/,
   "Laboratório 4": /^192\.168\.1\.(1[2-4][0-9]|150)$/,
   "Laboratório Mobile": /^192\.168\.1\.(151|1[5-9][0-9]|200)$/,
-  "Laboratório Professores": /^192\.168\.1\.(2[0-4][0-9]|250)$/,
-  "Outro Laboratório": /^192\.168\.1\.(1[0-9]|2[0-9]|30)$/,
+  "Laboratório Maker": /.*/ // Qualquer outro IP que não se encaixe nas faixas anteriores
 };
 
       // Inicializa o contador de bloqueios para cada laboratório
