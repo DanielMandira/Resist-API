@@ -100,16 +100,16 @@ class indexacaoService{
       // Obtenha todos os registros de bloqueios
       const bloqueios = await Indexacao.find({ flag: true });
       
-      const laboratorios = {
-        "Laboratório 1":  /.*/,
-        "Laboratório 2": /^192\.168\.1\.(3[1-9]|[4-5][0-9]|60)$/,
-        "Laboratório 3": /^192\.168\.1\.(6[1-9]|7[0-9]|80|90)$/,
-        "Laboratório 4": /^192\.168\.1\.(9[1-9]|[1-9][0-9]|120)$/,
-        "Laboratório Mobile": /^192\.168\.1\.(1[2-4][0-9]|150)$/,
-        "Laboratório Professores": /^192\.168\.1\.(2[1-4][0-9])$/,
-        "Outro Laboratório": /^192\.168\.1\.(1[0-9]|2[0-9]|30)$/,
-      };
-  
+       const laboratorios = {
+  "Laboratório 1": /^192\.168\.1\.(3[1-9]|[4-5][0-9]|60)$/,
+  "Laboratório 2": /^192\.168\.1\.(6[1-9]|7[0-9]|80)$/,
+  "Laboratório 3": /^192\.168\.1\.(9[1-9]|[1][0-1][0-9]|120)$/,
+  "Laboratório 4": /^192\.168\.1\.(1[2-4][0-9]|150)$/,
+  "Laboratório Mobile": /^192\.168\.1\.(151|1[5-9][0-9]|200)$/,
+  "Laboratório Professores": /^192\.168\.1\.(2[0-4][0-9]|250)$/,
+  "Outro Laboratório": /^192\.168\.1\.(1[0-9]|2[0-9]|30)$/,
+};
+
       // Inicializa o contador de bloqueios para cada laboratório
       const contagemLaboratorios = {};
       let totalBloqueios = 0;
